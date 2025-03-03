@@ -19,6 +19,7 @@ const VerifyAuth = async (
       process.env.JWT_TOKEN as string,
       (err, decoded: any) => {
         if (err) {
+          console.log(err)
           return res.status(401).send("Token inválido");
         }
         req.userId = decoded.userId;

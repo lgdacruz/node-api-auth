@@ -1,0 +1,30 @@
+### Create a new resource
+POST http://localhost:3000/create
+Content-Type: application/json
+
+{
+    "email": "test@ok.com", 
+    "password": "123456",
+    "name": "test"
+}
+
+### Login
+GET http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "email": "test@ok.com", 
+    "password": "123456"
+}
+
+### Authorized request
+GET http://localhost:3000/getdata
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M1ZWRjZmM3M2IxNTcxYTIwNWJhZjIiLCJpYXQiOjE3NDEwMjY5NzUsImV4cCI6MTc0MTExMzM3NX0.ivl7sT5NWShauwgzaoG6lcxBFz37zVpd6ASQ_3ZEmV4
+Content-Type: application/json
+
+{
+    "userId": "67c5edcfc73b1571a205baf2"
+}
+### Refreshtoken request
+POST http://localhost:3000/refreshToken
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M1ZWRjZmM3M2IxNTcxYTIwNWJhZjIiLCJpYXQiOjE3NDEwMjcyMzcsImV4cCI6MTc0MTYzMjAzN30.pnDfFQ8T7IGg1pFzojoBDRnqtkTzsFBILNFRD2KArsw

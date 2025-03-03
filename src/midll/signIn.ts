@@ -8,6 +8,7 @@ const SignInMidl = async (
   res: Response,
   next: NextFunction
 ) => {
+  console.log('oi')
   const { email, password } = req.body;
   if (!email || !password)
     return res.status(400).send("Insira todos os campos!");
@@ -26,7 +27,7 @@ const SignInMidl = async (
     const token = jwt.sign(
       { userId: user._id },
       process.env.JWT_TOKEN as string,
-      { expiresIn: 600 }
+      { expiresIn: "1d" }
     );
     const refresh = jwt.sign(
       { userId: user._id },
@@ -43,6 +44,7 @@ const SignInMidl = async (
     };
     next();
   } catch (e) {
+    console.log(e)
     return res.status(400).send("Usuário não encontrado");
   }
 };
