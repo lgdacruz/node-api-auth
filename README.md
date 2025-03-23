@@ -13,17 +13,26 @@ Este projeto é uma API RESTful construída com Node.js e Express, que implement
 ## Funcionalidades
 
 Registro de novos usuários
+
 Login de usuários com geração de JWT
+
 Operações CRUD para gerenciamento de usuários
+
 Proteção de rotas utilizando middleware de autenticação
+
 
 ### Tecnologias Utilizadas
 
 Node.js
+
 Express
+
 MongoDB
+
 Mongoose
+
 JWT (jsonwebtoken)
+
 
 ### Instalação
 
